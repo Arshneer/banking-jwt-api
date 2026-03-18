@@ -8,6 +8,9 @@ const accountRoutes = require("./routes/accountRoutes");
 const app = express();
 
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("🚀 Banking JWT API is running...");
+});
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
